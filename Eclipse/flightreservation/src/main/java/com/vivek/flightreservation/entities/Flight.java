@@ -1,11 +1,9 @@
 package com.vivek.flightreservation.entities;
 
-import java.security.Timestamp;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
 public class Flight extends AbstractEntity {
@@ -23,10 +21,10 @@ public class Flight extends AbstractEntity {
 	private String arrivalCity;
 	
 	@Column(name = "DATE_OF_DEPARTURE")
-	private Date dateOfDeparture;
+	private LocalDateTime dateOfDeparture;
 	
 	@Column(name = "ESTIMATED_DEPARTURE_TIME")
-	private Timestamp estimatedDepartureTime;
+	private LocalDateTime estimatedDepartureTime;
 
 	public String getFlightNumber() {
 		return flightNumber;
@@ -60,19 +58,19 @@ public class Flight extends AbstractEntity {
 		this.arrivalCity = arrivalCity;
 	}
 
-	public Date getDateOfDeparture() {
+	public LocalDateTime getDateOfDeparture() {
 		return dateOfDeparture;
 	}
 
-	public void setDateOfDeparture(Date dateOfDeparture) {
+	public void setDateOfDeparture(LocalDateTime dateOfDeparture) {
 		this.dateOfDeparture = dateOfDeparture;
 	}
 
-	public Timestamp getEstimatedDepartureTime() {
+	public LocalDateTime getEstimatedDepartureTime() {
 		return estimatedDepartureTime;
 	}
 
-	public void setEstimatedDepartureTime(Timestamp estimatedDepartureTime) {
+	public void setEstimatedDepartureTime(LocalDateTime estimatedDepartureTime) {
 		this.estimatedDepartureTime = estimatedDepartureTime;
 	}
 
